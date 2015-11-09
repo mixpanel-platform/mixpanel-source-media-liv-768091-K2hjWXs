@@ -252,7 +252,7 @@
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
 
-            var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment(), 'where': (string(properties["article name"]) != "undefined")}
+            var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment(), 'where': 'properties["article name"] != "undefined"')}
             var pageViewQuery = MP.api.segment('page view', 'article name', pageViewParams)
 
             pageViewQuery.done(function(results){
