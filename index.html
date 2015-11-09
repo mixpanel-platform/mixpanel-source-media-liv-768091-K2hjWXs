@@ -253,7 +253,7 @@
             $('.date-pm').text(ampm);
 
             var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment()}
-            var pageViewQuery = MP.api.segment('Page View', 'Url', pageViewParams)
+            var pageViewQuery = MP.api.segment('page view', 'Current URL', pageViewParams)
 
             pageViewQuery.done(function(results){
                 var data = {}
